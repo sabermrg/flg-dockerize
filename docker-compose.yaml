@@ -1,0 +1,55 @@
+version: !!str 3
+
+services:
+        loki:
+                container_name: loki
+                image: grafana/loki:latest
+                restart: unless-stopped
+                ports: 
+                      - '3100:3100'
+                volumes:
+                      - 'loki_data:/loki'
+                labels:
+                      - 'app.dws.name=loki'
+                      - 'app.dws.part-of=logging'
+                      - 'app.dws.scope=devops-with-saber'
+                      - 'app.dws.created-by=saber'
+
+        grafana:
+                container_name: grafana
+                image: grafana/grafana:latest
+                restart: unless-stopped
+                ports:
+                      - '3000:3000'
+                volumes:
+                      - 'grafana_data:/var/lib/grafana'
+                labels:
+                      - 'app.dws.name=grafana'
+                      - 'app.dws.part-of=logging'
+                      - 'app.dws.scope=devops-with-saber'
+                      - 'app.dws.created-by=saber'
+
+        fluentbit:
+                container_name: fluentbit
+                image: fluent/fluent-bit:latest
+                restart: unless-stopped
+                command:
+                      - '/fluent-bit/bin/fluent-bit'      
+                      - -c
+                      - /fluentbit.conf
+                ports:
+                      - '2020:2020'
+                      - '24224:24224'
+                volumes:
+                      - './fluentbit.conf:/fluentbit.conf'
+                      - './parsers.conf:/parsers.conf'
+                labels:
+                      - 'app.dws.name=fluentbit'
+                      - 'app.dws.part-of=logging'
+                      - 'app.dws.scope=devops-with-saber'
+                      - 'app.dws.created-by=saber'
+
+volumes:
+        loki_data:
+        grafana_data:        
+

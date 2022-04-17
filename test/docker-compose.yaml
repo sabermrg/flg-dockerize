@@ -1,0 +1,18 @@
+version: !!str 3
+
+services:
+  nginx:
+    image: nginx
+    restart: unless-stopped
+    labels:
+      app.docker.compose/name: nginx
+      app.docker.compose/part-of: test
+      app.docker.compose/created-by: saber
+    ports:
+      - 8081:80
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: 192.168.122.92:24224
+        fluentd-async: !!str true
+        tag: docker-nginx-{{.ID}}

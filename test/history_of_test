@@ -1,0 +1,362 @@
+    1  yum update
+    2  yum upgrade
+    3  chown "$USER":"$USER" /home/"$USER"/.docker -R
+    4  chmod g+rwx "$HOME/.docker" -R
+    5  curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    6  chmod +x /usr/local/bin/docker-compose
+    7  ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+    8  docker-compose --version
+    9  sudo systemctl daemon-reload
+   10  sudo systemctl restart docker.service
+   11  git clone https://github.com/deviantony/docker-elk
+   12  yum install git
+   13  git --version
+   14  git clone https://github.com/deviantony/docker-elk
+   15  cd docker-elk/
+   16  docker-compose up -d
+   17  mkdir -p /etc/systemd/system/docker.service.d
+   18  vi /etc/systemd/system/docker.service.d/proxy.conf
+   19  sudo systemctl daemon-reload
+   20  sudo systemctl restart docker.service
+   21  docker-compose up -d
+   22  vi /etc/systemd/system/docker.service.d/proxy.conf
+   23  sudo systemctl daemon-reload
+   24  sudo systemctl restart docker.service
+   25  docker-compose up -d
+   26  vi /etc/systemd/system/docker.service.d/proxy.conf
+   27  sudo systemctl daemon-reload
+   28  sudo systemctl restart docker.service
+   29  sudo systemctl status docker.service
+   30  vi /etc/systemd/system/docker.service.d/proxy.conf
+   31  sudo systemctl daemon-reload
+   32  sudo systemctl restart docker.service
+   33  docker-compose up -d
+   34  vi /etc/systemd/system/docker.service.d/proxy.conf
+   35  sudo systemctl daemon-reload
+   36  sudo systemctl restart docker.service
+   37  docker-compose up -d
+   38  sudo yum install -y yum-utils
+   39  yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+   40  sudo yum-config-manager --enable docker-ce-nightly
+   41  sudo yum-config-manager --disable docker-ce-nightly
+   42  sudo yum install docker-ce docker-ce-cli containerd.io
+   43  groupadd docker
+   44  usermod -aG docker $USER
+   45  newgrp docker 
+   46  ip a
+   47  mkdir -p /etc/systemd/system/docker.service.d
+   48  yum install -y vim
+   49  vim /etc/systemd/system/docker.service.d/proxy.conf
+   50  ip a
+   51  sudo yum install docker-ce docker-ce-cli containerd.io
+   52  git clone https://github.com/deviantony/docker-elk
+   53  cd docker-elk/
+   54  docker-compose up -d
+   55  systemctl status docker
+   56  systemctl restart docker
+   57  systemctl status docker
+   58  vim /etc/systemd/system/docker.service.d/proxy.conf
+   59  systemctl restart docker
+   60  systemctl daemon-reload
+   61  systemctl restart docker
+   62  systemctl status docker
+   63  docker-compose up -d
+   64  vim /etc/systemd/system/docker.service.d/proxy.conf
+   65  systemctl daemon-reload
+   66  systemctl restart docker
+   67  systemctl status docker
+   68  docker-compose up -d
+   69  vim /etc/resolv.conf 
+   70  docker-compose up -d
+   71  vim /etc/resolv.conf 
+   72  docker-compose up -d
+   73  vim /etc/resolv.conf 
+   74  docker-compose up -d
+   75  vim /etc/systemd/system/docker.service.d/proxy.conf
+   76  systemctl daemon-reload
+   77  systemctl restart docker
+   78  vim /etc/systemd/system/docker.service.d/proxy.conf
+   79  vim /etc/systemd/system/docker.service.d/proxy.conf
+   80  systemctl daemon-reload
+   81  systemctl restart docker
+   82  systemctl status docker
+   83  docker-compose up -d
+   84  docker-compose ps
+   85  ip a .122.
+   86  ip a |grep .122.
+   87  hostnamectl set-hostname elk-server
+   88  bash
+   89  ip a
+   90  cd docker-elk/
+   91  docker-compose ps 
+   92  systemctl status docker
+   93  systemctl start docker
+   94  systemctl enable docker
+   95  systemctl status docker
+   96  docker-compose ps
+   97  docker-compose up
+   98  docker-compose down
+   99  docker-compose down
+  100  docker-compose up -d
+  101  docker-compose ps
+  102  cd docker-elk/
+  103  docker-compose ps -a
+  104  docker-compose ps 
+  105  ll
+  106  vi /etc/systemd/system/docker.service.d/proxy.conf
+  107  cd /usr/share/filebeat/bin/
+  108  nohup ./filebeat -e -c /etc/filebeat/filebeat.yml &
+  109  tail -f nohup.out 
+  110  touch /var/log/test.log
+  111  vim /var/log/test.log
+  112  vim /etc/filebeat/filebeat.yml 
+  113  cd docker-elk/ll
+  114  cd docker-elk/
+  115  ll
+  116  docker-compose ps
+  117  vim /etc/profile
+  118  env | grep -i proxy
+  119  source /etc/profile
+  120  env | grep -i proxy
+  121  docker-compose down
+  122  docker-compose up -d
+  123  curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.1.2-x86_64.rpm
+  124  sudo rpm -vi filebeat-8.1.2-x86_64.rpm
+  125  ￼
+  126  vim /etc/filebeat/filebeat.yml 
+  127  sudo filebeat modules enable auditd
+  128  ￼
+  129  sudo filebeat setup
+  130  vim /etc/filebeat/filebeat.yml 
+  131  sudo filebeat modules enable auditd
+  132  ￼
+  133  sudo filebeat setup
+  134  sudo service filebeat start
+  135  ￼
+  136  curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-8.1.2-x86_64.rpm
+  137  ll
+  138  rm metricbeat-8.1.2-x86_64.rpm 
+  139  curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-8.1.2-x86_64.rpm
+  140  sudo rpm -vi metricbeat-8.1.2-x86_64.rpm
+  141  ￼
+  142  vim /etc/metricbeat/metricbeat.yml 
+  143  ll
+  144  ll elasticsearch/
+  145  vim elasticsearch/config/
+  146  vim elasticsearch/config/elasticsearch.yml
+  147  vim kibana/config/kibana.yml
+  148  vim elasticsearch/config/elasticsearch.yml 
+  149  ll
+  150  ip a
+  151  vim /etc/metricbeat/metricbeat.yml 
+  152  ./metricbeat modules enable docker
+  153  ￼
+  154  metricbeat modules enable docker
+  155  metricbeat setup
+  156  service metricbeat start
+  157  vim /etc/metricbeat/metricbeat.yml 
+  158  vim /etc/filebeat/filebeat.yml
+  159  ll /var/lib/filebeat/
+  160  systemctl stop filebeat
+  161  ll /var/lib/filebeat/registry/
+  162  rm -rf /var/lib/filebeat/registry/filebeat/
+  163  vi /etc/filebeat/filebeat.yml 
+  164  ll
+  165  vi logstash/config/logstash.yml 
+  166  docker-compose down
+  167  docker-compose up -d
+  168  docker-compose ps -a
+  169  vim /etc/selinux/config 
+  170  firewall-cmd --zone=public --add-port=5601/tcp
+  171  firewall-cmd --zone=public --add-port=9200/tcp
+  172  firewall-cmd --zone=public --add-port=9300/tcp
+  173  firewall-cmd --zone=public --add-port=5044/tcp
+  174  firewall-cmd --reload
+  175  vim /etc/selinux/config 
+  176  reboot
+  177  cd docker-elk/
+  178  ll
+  179  docker-compose up -d
+  180  docker-compose ps
+  181  docker-compose down
+  182  vim docker-compose.yml
+  183  vi logstash/config/logstash.yml 
+  184  docker-compose ps 
+  185  ll
+  186  docker-compose ps -a
+  187  docker-compose up -d
+  188  cd docker-elk/
+  189  docker-compose ps
+  190  docker-compose down
+  191  docker-compose up -d
+  192  vim /etc/filebeat/filebeat.yml 
+  193  sudo filebeat modules enable auditd
+  194  ￼
+  195  sudo filebeat modules enable auditd
+  196  ￼
+  197  sudo filebeat setup
+  198  filebeat setup
+  199  vim /etc/filebeat/filebeat.yml 
+  200  sestatus
+  201  docker-compose ps
+  202  vim /etc/filebeat/filebeat.yml 
+  203  systemctl restart filebeat
+  204  systemctl status filebeat
+  205  filebeat version
+  206  filebeat test output
+  207  filebeat modules list
+  208  filebeat modules enable system
+  209  filebeat modules list
+  210  vim /etc/filebeat/modules.d/system.yml
+  211  firewall-cmd --zone=public --add-port=9200/tcp
+  212  firewall-cmd --reload
+  213  sestatus 
+  214  iptables -L
+  215  systemctl status iptables
+  216  systemctl status iptable
+  217  systemctl status iptables
+  218  firewall-cmd --list
+  219  firewall-cmd --list-all
+  220  firewall-cmd --add-port=9200/tcp --permanent
+  221  firewall-cmd --add-port=9300/tcp --permanent
+  222  firewall-cmd --add-port=5601/tcp --permanent
+  223  firewall-cmd --reload
+  224  filebeat test output
+  225  vim /etc/filebeat/filebeat.yml 
+  226  scp /etc/filebeat/filebeat.yml root@192.168.122.201:/etc/filebeat/
+  227  ip a
+  228  vim /etc/selinux/config 
+  229  ip a
+  230  firewall-cmd --list-all
+  231  filebeat test output
+  232  vim /etc/filebeat/filebeat.yml 
+  233  vim /etc/filebeat/modules.d/system.yml
+  234  filebeat test output
+  235  vim /etc/filebeat/modules.d/system.yml
+  236  history
+  237  filebeat modules enable auditd
+  238  filebeat setup
+  239  service filebeat start
+  240  history 
+  241  vi logstash/config/logstash.yml 
+  242  service filebeat start
+  243  cd docker-elk/
+  244  docker-compose up 
+  245  docker-compose up -d
+  246  docker-compose ps
+  247  vim docker-compose.yml
+  248  vim /etc/filebeat/filebeat.yml 
+  249  vim /etc/filebeat/filebeat.yml
+  250  vim docker-compose.yml
+  251  ll
+  252  ll elasticsearch/
+  253  ll elasticsearch/config/elasticsearch.yml 
+  254  vim elasticsearch/config/elasticsearch.yml 
+  255  cd docker-elk/
+  256  vim docker-compose.yml 
+  257  cd /var/lib/docker/volumes/
+  258  ls -lhr
+  259  cd docker-elk_elasticsearch/_data/
+  260  l
+  261  ls
+  262  ip a
+  263  cd docker-elk/
+  264  docker-compose ps -a
+  265  docker-compose up -d
+  266  docker-compose down
+  267   
+  268  docker pull fluent/fluent-bit
+  269  docker ps
+  270  docker image ls
+  271  docker inspect influent-bit
+  272  docker inspect influent/fluent-bit:latest
+  273  docker inspect fluent/fluent-bit:latest
+  274  docker run --rm -it fluent/fluent-bit: /fluent-bit/bin/fluent-bit --version
+  275  docker run --rm -it fluent/fluent-bit:latest /fluent-bit/bin/fluent-bit --version
+  276  yum install netstat -y
+  277  yum update -y
+  278  uname
+  279  uname -a
+  280  yum install netstat -y
+  281  ping 8.8.8.8
+  282  docker image ls
+  283  firewall-cmd --zone=public --add-port=3100/tcp --permanent
+  284  firewall-cmd --reload
+  285  yum install net-tools -y
+  286  netstat -v
+  287  netstat -ntulp
+  288  netstat -nutlp
+  289  firewall-cmd --port-list
+  290  docker run --rm -it fluent/fluent-bit:latest /fluent-bit/bin/fluent-bit --version
+  291  docker run --rm -it fluent/fluent-bit:latest /fluent-bit/bin/fluent-bit -i yummy -o stdout
+  292  docker run --rm -it fluent/fluent-bit:latest /fluent-bit/bin/fluent-bit -i dummy -o stdout
+  293  docker run --rm -it fluent/fluent-bit:latest /fluent-bit/bin/fluent-bit -i cpu -o stdout
+  294  docker run --rm -it fluent/fluent-bit:latest /fluent-bit/bin/fluent-bit -i mem -o stdout
+  295  ip a
+  296  docker run --rm -it fluent/fluent-bit:latest /fluent-bit/bin/fluent-bit -i mem -t fluent_bit -o forward://192.168.122.92:24224
+  297  docker run --rm -it -p 24224:24224 fluent/fluent-bit:latest /fluent-bit/bin/fluent-bit -i forward -o stdout
+  298  docker-compose up -d
+  299  vim docker-compose.yaml 
+  300  docker-compose up -d
+  301  docker-compose ps
+  302  docker-compose down
+  303  vim docker-compose.yaml
+  304  docker-compose up -d
+  305  docker-compose ps
+  306  ip a
+  307  docker-compose ps
+  308  vim fluentbit.yml 
+  309  docker-compose restart fluentbit
+  310  docker-compose logs fluentbit
+  311  netstat -nutlp
+  312  docker-compose logs fluentbit
+  313  docker-compose logs fluentbit |grep 0.3.0
+  314  mkdir test; cd test
+  315  vim docker-compose.yaml
+  316  docker-compose up -d
+  317  docker-compose ps
+  318  vim docker-compose.yaml
+  319  docker-compose restart fluentbit
+  320  docker-compose logs test_nginx_1
+  321  docker-compose ps
+  322  docker-compose logs test_nginx_1
+  323  docker-compose logs nginx
+  324  vim docker-compose.yaml
+  325  curl 192.168.122.92:24224
+  326  curl 192.168.122.92 24224
+  327  curl 192.168.122.92:24224
+  328  docker-compose logs nginx
+  329  vim docker-compose.yaml
+  330  docker-compose restart nginx
+  331  curl 127.0.0.1:24224
+  332  ip a
+  333  curl 192.168.122.92:24224
+  334  docker-compose restart nginx
+  335  docker-compose logsnginx
+  336  docker-compose logs nginx
+  337  vim docker-compose.yaml
+  338  docker-compose restart nginx
+  339  docker-compose logs nginx
+  340  vim docker-compose.yaml 
+  341  vim docker-compose.yaml
+  342  curl 192.168.122.92:80
+  343  curl 192.168.122.92:8081
+  344  sestatus 
+  345  systemctl status firewalld
+  346  systemctl status iptable
+  347  systemctl status iptables
+  348  systemctl stop firewalld
+  349  curl 192.168.122.92:8081
+  350  telnet 192.168.122.92 80
+  351  yum install net-tools -y
+  352  telnet
+  353  yum install telnet telnet-server -y
+  354  telnet 192.168.122.92 80
+  355  telnet 192.168.122.92 8081
+  356  telnet 192.168.122.92 24224
+  357  telnet 127.0.0.1 24224
+  358  telnet 127.0.0.1 24225
+  359  netstat -ntulp
+  360  systemctl start firewalld
+  361  netstat -ntulp
+  362  history > history_of_test
